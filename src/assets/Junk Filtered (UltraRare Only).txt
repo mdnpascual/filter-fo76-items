@@ -1,0 +1,27 @@
+ [Junk] Black Titanium Ingot (Black Titanium++)
+ [Junk] Blast Radius Board Game (Wood+, Nuclear Material+)
+ [Junk] Flight Data Recorder (Circuitry, Fiber Optics+, Copper+)
+ [Junk] Fusion Pulse Charge (Circuitry+, Copper+, Nuclear Material+)
+ [Junk] High-Powered Magnet (Copper++, Ceramic++, Nuclear Material++)
+ [Junk] High-Powered Microscope (Crystal+, Fiber Optics+, Gear+, Glass+)
+ [Junk] Ichor Sac (Acid+, Nuclear Material+)
+ [Junk] Ignition Core (Nuclear Material++, Lead+, Steel+)
+ [Junk] Microscope (Gear, Glass, Crystal, Fiber Optics)
+ [Junk] Miner Suit Scrap (Gear, Black Titanium, Steel)
+ [Junk] MiniNuke Beryllium Cap (Steel+, Nuclear Material+)
+ [Junk] MiniNuke Detonator Shell (Nuclear Material, Steel++)
+ [Junk] MiniNuke Hemisphere Core (Nuclear Material, Steel+)
+ [Junk] Multiscope (Crystal+, Fiber Optics+, Gear+, Glass+)
+ [Junk] Rad Poker Board Game (Wood+, Nuclear Material+, Plastic+)
+ [Junk] Radioactive Gland (Nuclear Material)
+ [Junk] Radscorpion Stinger (Nuclear Material+)
+ [Junk] Scorchbeast Bones (Ultracite, Bone+)
+ [Junk] Scorchbeast Hide (Leather++, Ultracite++)
+ [Junk] Scorchbeast Wing Fragment (Leather+, Ultracite+)
+ [Junk] Vault-Tec Alarm Clock (Nuclear Material, Spring+, Glass+, Aluminum+)
+ [Junk] Volatile Materials Box (Nuclear Material)
+ [Junk] Wakemaster Alarm Clock (Aluminum, Glass+, Spring+, Nuclear Material+)
+ [Junk] Sheepsquatch Horn
+ [Junk] Strange Bone
+ [Junk] Workbench Parts
+ [Junk] Vault Steel Scrap

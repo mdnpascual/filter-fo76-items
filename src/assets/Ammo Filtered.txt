@@ -1,0 +1,28 @@
+[A] .308
+[A] .38
+[A] .44
+[A] .45
+[A] .50
+[A] .50 Ball
+[A] 10mm
+[A] 5.56
+[A] 5mm
+[A] Cannonball
+[A] Flare
+[A] Harpoon
+[A] Railway Spike
+[A] Shotgun Shell
+[A] Ultracite .308
+[A] Ultracite .38
+[A] Ultracite .44
+[A] Ultracite .45
+[A] Ultracite .50
+[A] Ultracite 10mm
+[A] Ultracite 5.56
+[A] Ultracite 5mm
+[A] Ultracite Railway Spike
+[A] Ultracite Shotgun Shell
+[A] Weaponized Nuka-Cherry
+[A] Weaponized Nuka-Cola
+[A] Weaponized Nuka-Cola Quantum
+[Film] Camera
