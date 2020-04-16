@@ -38,45 +38,49 @@
 					<label><input type="checkbox" aria-label="Mines" class="align-middle" :checked="settings.Mines" @change="memberChange($event.target.checked, 'Mines')"><a class="ml-3">Mines</a></label><br>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
-				<br>
-				</div>
-			</div>
-			<div class="row">
+			<div class="row mt-3">
 				<div class="col">
 				JUNK SECTION
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
-				<br>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
+			<div class="row mt-3">
+				<div class="col text-xl-left ml-3">
 					<PresetGroup
 							name="Ultra Rare"
 							@memberChange="memberChange"
 							:inputObject="settings.Junk.UltraRareList"></PresetGroup>
 					</div>
-				<div class="col">
+				<div class="col text-xl-left ml-3">
 					<PresetGroup
 							name="Very Rare"
 							@memberChange="memberChange"
 							:inputObject="settings.Junk.VeryRareList"></PresetGroup>
 				</div>
-				<div class="col">
+				<div class="col text-xl-left ml-3">
 					<PresetGroup
 							name="Rare"
 							@memberChange="memberChange"
 							:inputObject="settings.Junk.RareList"></PresetGroup>
 				</div>
-				<div class="col">
+				<div class="col text-xl-left ml-3">
 					<PresetGroup
 							name="Uncommon"
 							@memberChange="memberChange"
 							:inputObject="settings.Junk.UncommonList"></PresetGroup>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col text-xl-left ml-3">
+					<PresetGroup
+							name="Common"
+							@memberChange="memberChange"
+							:inputObject="settings.Junk.CommonList"></PresetGroup>
+				</div>
+				<div class="col text-xl-left ml-3">
+				</div>
+				<div class="col text-xl-left ml-3">
+				</div>
+				<div class="col text-xl-left ml-3">
 				</div>
 			</div>
 		</div>
@@ -158,6 +162,14 @@ export default {
 						Screws: true,
 						Silver: true,
 						Springs: true,
+					},
+					CommonList:{
+						Steel: false,
+						Glass: false,
+						Wood: false,
+						Cloth: false,
+						Bone: false,
+						Ceramic: false,
 					}
 				}
 			}

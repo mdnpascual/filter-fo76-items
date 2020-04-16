@@ -1,5 +1,0 @@
-[Armored] Cage Armor
-[Armored] Chinese Stealth Armor {PPE}
-[Armored] Helmeted Cage Armor {PPE}
-[Armored] Helmeted Spike Armor {PPE}
-[Armored] Spike Armor

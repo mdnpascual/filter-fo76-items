@@ -1,6 +1,0 @@
-(Drink) Boiled Water
-(Drink) Brahmin Milk
-(Drink) Chally&apos;s Milk
-(Drink) Cream
-(Drink) Inert Flux
-(Drink) Purified Water
