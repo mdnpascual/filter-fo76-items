@@ -6,11 +6,13 @@
 					<!-- Render Tabs, supply a unique `key` to each tab -->
 					<b-tab v-for="(preset, i) in tabs" :key="'dyn-tab-' + i" :title="preset.name + ' Preset'">
 					{{ preset.name }} Preset
-						<b-button size="sm" variant="danger" class="float-right" @click="closeTab(preset.name)">
+						<b-button size="sm" variant="danger" class="float-left" @click="closeTab(preset.name)">
 							Delete Preset
 						</b-button>
 						<Preset :name="preset.name"
-							@nameChange="nameChange($event, i)">
+							@nameChange="nameChange($event, i)"
+							@settingChange="settingChange($event, i)"
+							@memberChange="memberChange(i, ...arguments)">
 						</Preset>
 					</b-tab>
 
@@ -59,13 +61,24 @@ export default {
 		newTab() {
 			this.tabs.push(
 				{
-					name: "Empty "+this.tabCounter++
+					name: "Empty "+this.tabCounter++,
+					settings: {}
 				}
 			)
 		},
 		nameChange(event, i){
 			var tempPreset = this.tabs[i];
 			tempPreset.name = event
+			this.$set(this.tabs, i, tempPreset);
+		},
+		settingChange(event, i){
+			var tempPreset = this.tabs[i];
+			tempPreset.settings = event
+			this.$set(this.tabs, i, tempPreset);
+		},
+		memberChange(i, event, name){
+			var tempPreset = this.tabs[i];
+			tempPreset.settings[name] = event;
 			this.$set(this.tabs, i, tempPreset);
 		}
 	}
