@@ -33,9 +33,8 @@
 				</div>
 				<div class="col text-xl-left ml-3">
 					<label><input type="checkbox" aria-label="FullArmor" class="align-middle" :checked="settings.FullArmor" @change="memberChange($event.target.checked, 'FullArmor')"><a class="ml-3">FullArmor</a></label><br>
-					<label><input type="checkbox" aria-label="Grenade" class="align-middle" :checked="settings.Grenade" @change="memberChange($event.target.checked, 'Grenade')"><a class="ml-3">Grenade</a></label><br>
 					<label><input type="checkbox" aria-label="Hazmat" class="align-middle" :checked="settings.Hazmat" @change="memberChange($event.target.checked, 'Hazmat')"><a class="ml-3">Hazmat</a></label><br>
-					<label><input type="checkbox" aria-label="Mines" class="align-middle" :checked="settings.Mines" @change="memberChange($event.target.checked, 'Mines')"><a class="ml-3">Mines</a></label><br>
+					<label><input type="checkbox" aria-label="Mines" class="align-middle" :checked="settings.Mining" @change="memberChange($event.target.checked, 'Mining')"><a class="ml-3">Mining</a></label><br>
 				</div>
 			</div>
 			<div class="row mt-3">
@@ -104,29 +103,32 @@ export default {
 			initialized: false,
 			settings: {
 				Aid: {
-					StimSalve: true,
-					Stealth: true,
-					DiseaseRad: true,
 					Chem: true,
+					DiseaseRad: true,
 					Drink: true,
-					PrewarFood: true,
 					Nuka: true,
+					PrewarFood: true,
+					Stealth: true,
+					StimSalve: true,
 				},
 				Ammo: {
 					Arrow: false,
 					Ballistic: true,
 					Energy: false,
+					Grenade: true,
 					Heavy: false,
+					Mines: true,
 				},
 				Collectible:{
+					Attire: false,
 					Bobbleheads: true,
 					Magazines: true,
-					Attire: false,
+					Plan: true,
+					Recipe: true,
 				},
 				FullArmor: true,
-				Grenade: true,
 				Hazmat: true,
-				Mines: true,
+				Mining: true,
 				Junk: {
 					UltraRareList: {
 						BlackTitanium: true,
