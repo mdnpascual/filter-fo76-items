@@ -32,6 +32,12 @@
 						:inputObject="settings.Collectible"></PresetGroup>
 				</div>
 				<div class="col text-xl-left ml-3">
+					<PresetGroup
+						name="Flux"
+						@memberChange="memberChange"
+						:inputObject="settings.Flux"></PresetGroup>
+				</div>
+				<div class="col text-xl-left ml-3">
 					<label><input type="checkbox" aria-label="FullArmor" class="align-middle" :checked="settings.FullArmor" @change="memberChange($event.target.checked, 'FullArmor')"><a class="ml-3">FullArmor</a></label><br>
 					<label><input type="checkbox" aria-label="Hazmat" class="align-middle" :checked="settings.Hazmat" @change="memberChange($event.target.checked, 'Hazmat')"><a class="ml-3">Hazmat</a></label><br>
 					<label><input type="checkbox" aria-label="Mines" class="align-middle" :checked="settings.Mining" @change="memberChange($event.target.checked, 'Mining')"><a class="ml-3">Mining</a></label><br>
@@ -67,19 +73,11 @@
 							@memberChange="memberChange"
 							:inputObject="settings.Junk.UncommonList"></PresetGroup>
 				</div>
-			</div>
-			<div class="row mt-3">
 				<div class="col text-xl-left ml-3">
 					<PresetGroup
 							name="Common"
 							@memberChange="memberChange"
 							:inputObject="settings.Junk.CommonList"></PresetGroup>
-				</div>
-				<div class="col text-xl-left ml-3">
-				</div>
-				<div class="col text-xl-left ml-3">
-				</div>
-				<div class="col text-xl-left ml-3">
 				</div>
 			</div>
 		</div>
@@ -125,6 +123,14 @@ export default {
 					Magazines: true,
 					Plan: true,
 					Recipe: true,
+				},
+				Flux:{
+					Components: true,
+					Cobalt: true,
+					Crimson: true,
+					Fluorescent: true,
+					Violet: true,
+					Yellowcake: true,
 				},
 				FullArmor: true,
 				Hazmat: true,
@@ -188,6 +194,6 @@ export default {
 			this.initialized = true;
 			this.$emit("settingChange", this.settings);
 		}
-	}
+	},
 }
 </script>

@@ -44,6 +44,8 @@
 
 <script>
 
+import Darkmode from 'darkmode-js'
+
 import Preset from './components/Preset'
 import AcidJSON from './assets/Junk_Uncommon_Acid Filtered.json';
 import AdhesiveJSON from './assets/Junk_VRare_Adhesive Filtered.json';
@@ -70,6 +72,12 @@ import DiseaseRadJSON from './assets/Aid2 Filtered.json';
 import DrinkJSON from './assets/Drink Filtered.json';
 import EnergyJSON from './assets/Ammo_energy Filtered.json';
 import FertilizerJSON from './assets/Junk_VRare_Fertilizer Filtered.json';
+import FluxCobaltJSON from './assets/Flux_Cobalt.json';
+import FluxCrimsonJSON from './assets/Flux_Crimson.json';
+import FluxFluorescentJSON from './assets/Flux_Fluorescent.json';
+import FluxVioletJSON from './assets/Flux_Violet.json';
+import FluxYellowcakeJSON from './assets/Flux_Yellowcake.json';
+import FluxComponentsJSON from './assets/Flux_Components.json';
 import FiberglassJSON from './assets/Junk_Rare_Fiberglass Filtered.json';
 import FiberOpticsJSON from './assets/Junk_URare_FiberOptics Filtered.json'
 import FullArmorJSON from './assets/Armored Filtered.json';
@@ -140,6 +148,12 @@ export default {
 			Fertilizer: FertilizerJSON,
 			Fiberglass: FiberglassJSON,
 			FiberOptics: FiberOpticsJSON,
+			FluxCobalt: FluxCobaltJSON,
+			FluxCrimson: FluxCrimsonJSON,
+			FluxFluorescent: FluxFluorescentJSON,
+			FluxViolet: FluxVioletJSON,
+			FluxYellowcake: FluxYellowcakeJSON,
+			FluxComponents: FluxComponentsJSON,
 			FullArmor: FullArmorJSON,
 			Gears: GearsJSON,
 			Glass: GlassJSON,
@@ -295,6 +309,12 @@ t = 0
 					...(preset.settings.Collectible.Magazines ? this.Magazine : []),
 					...(preset.settings.Collectible.Plan ? this.Plan : []),
 					...(preset.settings.Collectible.Recipe ? this.Recipe : []),
+					...(preset.settings.Flux.Cobalt ? this.FluxCobalt : []),
+					...(preset.settings.Flux.Crimson ? this.FluxCrimson : []),
+					...(preset.settings.Flux.Fluorescent ? this.FluxFluorescent : []),
+					...(preset.settings.Flux.Violet ? this.FluxViolet : []),
+					...(preset.settings.Flux.Yellowcake ? this.FluxYellowcake : []),
+					...(preset.settings.Flux.Components ? this.FluxComponents : []),
 					...(preset.settings.FullArmor ? this.FullArmor : []),
 					...(preset.settings.Hazmat ? this.Hazmat : []),
 					...(preset.settings.Mining ? this.Mining : []),
@@ -345,6 +365,9 @@ t = 0
 				return arrayList;
 
 		}
+	},
+	created(){
+		new Darkmode().showWidget();
 	}
 }
 
@@ -358,5 +381,8 @@ t = 0
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
+}
+.darkmode-layer, .darkmode-toggle {
+	z-index: 500;
 }
 </style>

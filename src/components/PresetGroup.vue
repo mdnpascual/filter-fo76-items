@@ -1,22 +1,22 @@
 <template>
-	<div class="accordion" :id="'accordion'+name">
+	<div class="accordion" :id="'accordion'+nameNoSpace">
 		<div class="card">
-			<div class="card-header" :id="'heading'+name">
-				<h2 class="mb-0">
+			<div class="card-header" :id="'heading'+nameNoSpace">
+				<h3 class="mb-0">
 					<div class="d-flex">
 						<div class="">
 							<label><input type="checkbox" :aria-label="name" class="align-middle" :checked="Object.values(inputObject).every(val => val)" @change="groupChange($event)"><a class="ml-3">{{name}}</a></label>
 						</div>
 						<div class="flex-grow-1">
-							<button class="btn btn-link mw-100 w-100" type="button" data-toggle="collapse" :data-target="'#collapse'+name" aria-expanded="true" :aria-controls="'collapse'+name">
+							<button class="btn btn-link mw-100 w-100" type="button" data-toggle="collapse" :data-target="'#collapse'+nameNoSpace" aria-expanded="true" :aria-controls="'collapse'+nameNoSpace">
 						▼
 					</button>
 						</div>
 					</div>
-				</h2>
+				</h3>
 			</div>
 
-			<div :id="'collapse'+name" class="collapse show" :aria-labelledby="'heading'+name" :data-parent="'#accordion'+name">
+			<div :id="'collapse'+nameNoSpace" class="collapse show" :aria-labelledby="'heading'+nameNoSpace" :data-parent="'#accordion'+nameNoSpace">
 				<div class="card-body">
 					<div v-for="(value, category) in inputObject" :key="category">
 						<label><input type="checkbox" :aria-label="category" class="align-middle" :checked="value" @change="memberChange($event, category)"><a class="ml-3">{{category.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })}}</a></label>
@@ -36,7 +36,7 @@ export default {
 	},
 	data(){
 		return{
-
+			nameNoSpace: this.name.replace(" ", "_")
 		}
 	},
 	methods: {
